@@ -1,8 +1,9 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { db } from './firebase-config/firebase-config';
 import { collection, doc, getDocs, addDoc, updateDoc, deleteDoc } from 'firebase/firestore'
-
+require('dotenv').config();
+console.log(process.env);
 function App() {
   const [users, setUsers] = useState([]);
   const [value, setValue] = useState(0);
